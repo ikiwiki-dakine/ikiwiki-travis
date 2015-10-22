@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# do not put password on key
+ssh-keygen -f .travisdeploykey
+travis encrypt-file .travisdeploykey
+rm .travisdeploykey
+
+echo "Upload .travisdeploykey.pub as a deploy key on the repo (with write access)"
