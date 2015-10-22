@@ -20,6 +20,7 @@ script:
   - ikiwiki --rebuild . _site
   - git clone --bare -b gh-pages git@github.com:zmughal/ikiwiki-travis.git _site/.git
   - cd _site
+  - git config core.bare false
   - git add -f .
   - 'git commit -m "${COMMIT_MESSAGE}"'
   - git push -f git@github.com:zmughal/ikiwiki-travis.git gh-pages:gh-pages
