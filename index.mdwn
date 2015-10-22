@@ -1,6 +1,6 @@
 [[!meta title="Test page for travis-ikiwiki"]]
 [[!meta author="zaki"]]
 
-Testing the ikiwiki
+Testing the ikiwiki on Travis-CI.
 
 [[!tag draft]]
