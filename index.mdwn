@@ -2,5 +2,3 @@
 [[!meta author="zaki"]]
 
 Testing the ikiwiki on Travis-CI.
-
-[[!tag draft]]
