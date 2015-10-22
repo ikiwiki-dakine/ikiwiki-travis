@@ -11,14 +11,14 @@ install:
   - chmod go-rwx .travisdeploykey
   - eval `ssh-agent -s`
   - ssh-add .travisdeploykey
-  - git config user.name "Travis-CI"
-  - git config user.email "noreply@travis-ci.org"
+  - git config --global user.name "Travis-CI"
+  - git config --global user.email "noreply@travis-ci.org"
   - COMMIT_MESSAGE="Publishing site on `date "+%Y-%m-%d %H:%M:%S"` from
     `git log -n 1 --format='commit %h - %s'`"
 script:
   #- set -e
-  - git clone -b gh-pages git@github.com:zmughal/ikiwiki-travis.git _site
-  - ikiwiki . _site
+  - ikiwiki --rebuild . _site
+  - git clone --bare -b gh-pages git@github.com:zmughal/ikiwiki-travis.git _site/.git
   - cd _site
   - git add -f .
   - 'git commit -m "${COMMIT_MESSAGE}"'
