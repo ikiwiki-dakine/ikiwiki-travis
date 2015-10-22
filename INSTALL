@@ -1,0 +1,5 @@
+#!/bin/sh
+
+CURDIR=`dirname "$0"`
+
+sudo gem install travis
