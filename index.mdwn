@@ -1,4 +1,4 @@
-[[!meta title="Test page for travis-ikiwiki"]]
+[[!meta title="Test page for ikiwiki-travis"]]
 [[!meta author="zaki"]]
 
 Testing the ikiwiki on Travis-CI.
