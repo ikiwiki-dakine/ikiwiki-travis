@@ -2,3 +2,6 @@
 [[!meta author="zaki"]]
 
 Testing the ikiwiki on Travis-CI.
+
+- <https://github.com/zmughal/ikiwiki-travis>
+- [![Build Status](https://travis-ci.org/zmughal/ikiwiki-travis.svg?branch=master)](https://travis-ci.org/zmughal/ikiwiki-travis)
