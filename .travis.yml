@@ -16,13 +16,13 @@ install:
   - COMMIT_MESSAGE="Publishing site on `date "+%Y-%m-%d %H:%M:%S"` from
     `git log -n 1 --format='commit %h - %s'`"
 script:
-  - set -e
-  - git clone -b gh-pages . _site
+  #- set -e
+  - git clone -b gh-pages git@github.com:zmughal/ikiwiki-travis.git _site
   - ikiwiki . _site
   - cd _site
   - git add -f .
   - 'git commit -m "${COMMIT_MESSAGE}"'
-  - git push -f git@github.com:zmughal/travis-ikiwiki.git gh-pages:gh-pages
+  - git push -f git@github.com:zmughal/ikiwiki-travis.git gh-pages:gh-pages
 
 branches:
   only:
