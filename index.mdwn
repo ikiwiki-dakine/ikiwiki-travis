@@ -5,3 +5,5 @@ Testing the ikiwiki on Travis-CI.
 
 - <https://github.com/zmughal/ikiwiki-travis>
 - [![Build Status](https://travis-ci.org/zmughal/ikiwiki-travis.svg?branch=master)](https://travis-ci.org/zmughal/ikiwiki-travis)
+
+Travis-CI configuration based off of [this blog post](http://ellismichael.com/technical/2015/06/12/using-travis-ci-with-github-pages/).
