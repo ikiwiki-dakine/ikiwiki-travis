@@ -13,15 +13,17 @@ install:
   - git config --global user.email "noreply@travis-ci.org"
   - COMMIT_MESSAGE="Publishing site on `date "+%Y-%m-%d %H:%M:%S"` from
     `git log -n 1 --format='commit %h - %s'`"
+  - GH_PAGES_REPO="git@github.com:${TRAVIS_REPO_SLUG}.git"
+  - GH_PAGES_BRANCH="gh-pages"
 script:
   #- set -e
   - ikiwiki --rebuild . _site
-  - git clone --bare -b gh-pages git@github.com:ikiwiki-tavi/ikiwiki-travis.git _site/.git
+  - git clone --bare -b "$GH_PAGES_BRANCH" "$GH_PAGES_REPO" _site/.git
   - cd _site
   - git config core.bare false
   - git add -f .
   - 'git commit -m "${COMMIT_MESSAGE}"'
-  - git push -f git@github.com:ikiwiki-tavi/ikiwiki-travis.git gh-pages:gh-pages
+  - git push -f "$GH_PAGES_REPO" "$GH_PAGES_BRANCH":"$GH_PAGES_BRANCH"
 
 branches:
   only:
