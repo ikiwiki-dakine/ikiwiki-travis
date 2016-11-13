@@ -1,9 +1,12 @@
 sudo: false
+language: perl
 addons:
   apt:
     packages:
       - build-essential
       - ikiwiki
+      - libtext-multimarkdown-perl
+      - libimage-magick-perl
 install:
   - openssl aes-256-cbc -K $encrypted_97fba1a3df90_key -iv $encrypted_97fba1a3df90_iv -in .travisdeploykey.enc -out .travisdeploykey -d
   - chmod go-rwx .travisdeploykey
